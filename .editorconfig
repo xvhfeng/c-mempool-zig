@@ -1,0 +1,105 @@
+# Linux kernel style oriented EditorConfig
+# https://editorconfig.org
+
+root = true
+
+# 全局默认规则
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# C 源码与头文件：偏 Linux 内核风格
+[*.{c,h}]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+max_line_length = 80
+
+# 内核常见汇编文件
+[*.{s,S,asm}]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+max_line_length = 80
+
+# Makefile：必须使用 tab
+[Makefile]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+
+[makefile]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+
+[*.mk]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+
+# Kbuild / Kconfig
+[Kbuild]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+
+[Kconfig]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+
+[*.kconfig]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+
+# 设备树文件
+[*.{dts,dtsi}]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+max_line_length = 80
+
+# Shell 脚本
+[*.sh]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+max_line_length = 80
+
+# Python 工具脚本，内核工具里常见 4 空格
+[*.py]
+indent_style = space
+indent_size = 4
+tab_width = 4
+max_line_length = 80
+
+# Perl 脚本
+[*.pl]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+max_line_length = 80
+
+# 文档
+[*.{txt,rst}]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+max_line_length = 80
+
+# Markdown：保留行尾空格，避免破坏换行语义
+[*.md]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = false
+max_line_length = 80
+
+# JSON / YAML：一般工具生态更适合 2 空格
+[*.{json,yml,yaml}]
+indent_style = space
+indent_size = 2
+tab_width = 2
